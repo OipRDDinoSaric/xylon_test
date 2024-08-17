@@ -27,8 +27,8 @@ sysStartTimer([[maybe_unused]] std::uint64_t timeout,
 std::chrono::microseconds
 sysTimerTick()
 {
-    using std::chrono_literals::operator""ms;
-    return 0ms;
+    using std::chrono_literals::operator""us;
+    return 0us;
 };
 
 namespace Xylon

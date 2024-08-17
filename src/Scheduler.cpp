@@ -39,10 +39,10 @@ Scheduler::cancel(Timer& timer)
         {
             if (timers.empty())
             {
-                using std::chrono_literals::operator""ms;
+                using std::chrono_literals::operator""us;
                 // This is dependent on the implementation of the underlying system timer. It
                 // assumes it will not call a null pointer.
-                SystemTimer::start(0ms, nullptr, this);
+                SystemTimer::start(0us, nullptr, this);
             }
             else
             {
